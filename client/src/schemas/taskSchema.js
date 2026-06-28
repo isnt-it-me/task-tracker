@@ -1,0 +1,20 @@
+import { z } from "zod";
+
+export const taskSchema = z.object({
+    title: z
+        .string()
+        .trim()
+        .min(3, "Title must be at least 3 characters.")
+        .max(100, "Title cannot exceed 100 characters."),
+
+    description: z
+        .string()
+        .trim()
+        .max(500, "Description cannot exceed 500 characters."),
+
+    priority: z.enum(["Low", "Medium", "High"]),
+
+    status: z.enum(["Pending", "In Progress", "Completed"]),
+
+    dueDate: z.string().optional(),
+});
