@@ -105,7 +105,7 @@ npm run dev
 ### Client (.env)
 
 ```env
-VITE_API_URL=http://localhost:5000/api
+VITE_API_URL=VITE_API_URL
 ```
 
 ### Server (.env)
