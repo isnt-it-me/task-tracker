@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
     res.status(200).json({
         success: true,
-        message: "Task Tracker API is running 🚀",
+        message: "Task Tracker API is running ",
     });
 });
 
